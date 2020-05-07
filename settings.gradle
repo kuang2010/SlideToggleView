@@ -1,2 +1,3 @@
 rootProject.name='SlideToggle'
 include ':app'
+include ':slidetoggle'
