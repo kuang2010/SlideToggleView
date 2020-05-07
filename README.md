@@ -23,6 +23,8 @@ Step 2. Add the dependency
   
 
 Step 3. add it in your layout xml file:
+
+
     <com.kuang2010.slidetoggle.view.SlideToggleView
         android:id="@+id/stv_demo"
         android:layout_width="wrap_content"
@@ -32,14 +34,13 @@ Step 3. add it in your layout xml file:
         
         
 Step 4.  in activity:
-        SlideToggleView stv_demo = findViewById(R.id.stv_demo);
 
+        SlideToggleView stv_demo = findViewById(R.id.stv_demo);
         stv_demo.setOnToggleChangeListener(new SlideToggleView.OnToggleChangeListener() {
             @Override
             public void onToggleChange(View view, boolean open) {
                 Toast.makeText(MainActivity.this,open?"打开":"关闭",Toast.LENGTH_SHORT).show();
             }
         });
-
         stv_demo.setToggleState(true);
         
