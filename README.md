@@ -1,5 +1,7 @@
 # SlideToggleView
 A Android Button View With Slide Function To Switch
+一个简便的自定义开关按钮
+![Image text](slidebutton%20.gif)
 
 How To Use
 Step 1. Add the JitPack repository to your build file
