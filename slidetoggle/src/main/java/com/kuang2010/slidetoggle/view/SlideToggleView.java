@@ -156,7 +156,7 @@ public class SlideToggleView extends View {
                 draw_state = State.DRAW_STATE_MOVE;
                 mTouchX = event.getX();
                 break;
-            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_UP://处理最终边界结果
                 if (draw_state!=State.DRAW_STATE_UP){
                     draw_state = State.DRAW_STATE_UP;
                     mTouchX = event.getX();
@@ -166,4 +166,6 @@ public class SlideToggleView extends View {
         invalidate();// 触发onDraw的调用
         return true;// 自己消费
     }
+
+
 }
