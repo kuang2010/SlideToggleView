@@ -67,7 +67,7 @@ public class SlideToggleView extends View {
     }
 
 
-    //样子
+    //每次都重新画样子
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -83,7 +83,7 @@ public class SlideToggleView extends View {
             changeSlideButton(canvas);
         }
 
-        //始终在canvas上只画了两次bitmap
+        //始终只drawBitMap两个：canvas.drawBitmap(mBitmap_switch_background),  canvas.drawBitmap(mBitmap_slide_button_background)
     }
 
     private void changeSlideButton(Canvas canvas) {
@@ -98,7 +98,7 @@ public class SlideToggleView extends View {
                 canvas.drawBitmap(mBitmap_slide_button_background,mView_width-mSlide_width,0,mPaint);
             }else {
                 canvas.drawBitmap(mBitmap_slide_button_background, mTouchX - mSlide_width / 2,0,mPaint);
-
+                //看draw_state==State.DRAW_STATE_DOWN的情况就明白为什么减mSlide_width / 2了，不是手指点哪里盖子的左上角就到哪里的，是要少于点的位置的。
             }
         }else {
             //松开时
