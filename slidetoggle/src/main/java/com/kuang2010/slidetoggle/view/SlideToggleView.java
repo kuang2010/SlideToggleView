@@ -67,7 +67,7 @@ public class SlideToggleView extends View {
     }
 
 
-    //每次都重新画样子
+    //每次都会重新画样子
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -137,7 +137,7 @@ public class SlideToggleView extends View {
             mTouchX = 0;
         }
         draw_state = State.DRAW_STATE_UP;
-        invalidate();
+        invalidate(); //每次都会重新画样子
     }
 
 
